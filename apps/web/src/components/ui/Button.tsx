@@ -11,10 +11,10 @@ export function Button({ className, variant = 'primary', ...props }: ButtonProps
   return (
     <button
       className={cn(
-        'inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-2.5 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-60',
-        variant === 'primary' && 'bg-slate-950 text-white shadow-lg shadow-slate-950/15 hover:-translate-y-0.5 hover:bg-slate-800',
-        variant === 'secondary' && 'border border-slate-200 bg-white text-slate-900 hover:bg-slate-50',
-        variant === 'ghost' && 'text-slate-600 hover:bg-slate-100 hover:text-slate-950',
+        'inline-flex items-center justify-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-60',
+        variant === 'primary' && 'bg-[var(--cb-accent)] text-white hover:bg-[var(--cb-accent-deep)]',
+        variant === 'secondary' && 'border border-[var(--cb-line)] bg-white text-[var(--cb-ink)] hover:border-[var(--cb-ink)]',
+        variant === 'ghost' && 'text-[var(--cb-muted)] hover:bg-white hover:text-[var(--cb-ink)]',
         className
       )}
       {...props}

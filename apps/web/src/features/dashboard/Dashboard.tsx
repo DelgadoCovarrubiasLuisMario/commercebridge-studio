@@ -29,11 +29,11 @@ export function Dashboard() {
       {apiError ? (
         <p className="rounded-2xl border border-red-200 bg-red-50 p-3 text-sm text-red-700">{apiError.message}</p>
       ) : null}
-      <section className="gradient-card overflow-hidden rounded-[2rem] p-8 text-white shadow-2xl shadow-slate-950/20">
-        <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }} className="max-w-3xl">
+      <section className="gradient-card overflow-hidden rounded-2xl p-7 sm:p-8">
+        <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="max-w-3xl">
           <Badge className="bg-white/10 text-white ring-1 ring-white/20">{themeQuery.data?.announcement ?? 'Demo storefront'}</Badge>
-          <h1 className="mt-5 text-4xl font-black tracking-tight md:text-6xl">{themeQuery.data?.heroTitle ?? 'Launch-ready storefronts'}</h1>
-          <p className="mt-4 max-w-2xl text-lg text-slate-200">{themeQuery.data?.heroSubtitle ?? 'Manage products, leads and Liquid-style sections from one portfolio-grade dashboard.'}</p>
+          <h1 className="cb-display mt-5 text-4xl font-bold tracking-tight md:text-6xl">{themeQuery.data?.heroTitle ?? 'Launch-ready storefronts'}</h1>
+          <p className="mt-4 max-w-2xl text-base leading-7 text-[#f3d9e6] md:text-lg">{themeQuery.data?.heroSubtitle ?? 'Manage products, leads and Liquid-style sections from one retail ops desk.'}</p>
         </motion.div>
       </section>
 

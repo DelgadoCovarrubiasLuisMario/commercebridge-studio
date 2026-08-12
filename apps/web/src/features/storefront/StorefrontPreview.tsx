@@ -29,7 +29,7 @@ export function StorefrontPreview() {
       <Card className="overflow-hidden p-0">
         <div className="border-b border-slate-200 p-6">
           <CardTitle>Storefront preview</CardTitle>
-          <CardDescription>Landing section designed to show e-commerce adaptation and component composition.</CardDescription>
+          <CardDescription>Preview storefront sections before you publish.</CardDescription>
         </div>
         <div className="bg-[#f5f1ea] p-6">
           <div className="overflow-hidden rounded-[2rem] bg-white shadow-2xl shadow-slate-900/10">

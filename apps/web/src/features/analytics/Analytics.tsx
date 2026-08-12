@@ -15,7 +15,7 @@ export function Analytics() {
     <div className="grid gap-6 xl:grid-cols-[1fr_0.8fr]">
       <Card>
         <CardTitle>Inventory distribution</CardTitle>
-        <CardDescription>Simple no-library chart to keep bundle size focused.</CardDescription>
+        <CardDescription>Stock levels across the active catalog.</CardDescription>
         <div className="mt-6 space-y-4">
           {products.map((product) => (
             <div key={product.id}>
@@ -33,7 +33,7 @@ export function Analytics() {
 
       <Card>
         <CardTitle>Business summary</CardTitle>
-        <CardDescription>Data points that can be explained in interviews.</CardDescription>
+        <CardDescription>Catalog health and lead pipeline at a glance.</CardDescription>
         <div className="mt-6 grid gap-3">
           <Summary label="Product types" value={productTypes.length.toString()} />
           <Summary label="Potential stock value" value={currency(products.reduce((sum, product) => sum + product.price * product.inventoryQuantity, 0))} />

@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.gradient-card {
+  background:
+    radial-gradient(circle at top left, rgba(249, 115, 22, 0.16), transparent 34%),
+    linear-gradient(135deg, #111827 0%, #1f2937 52%, #0f172a 100%);
+}
+
+.liquid-preview h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.liquid-preview p {
+  margin: 0.35rem 0;
+}

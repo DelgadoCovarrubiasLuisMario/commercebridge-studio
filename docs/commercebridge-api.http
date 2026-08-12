@@ -1,0 +1,57 @@
+@baseUrl = http://localhost:4100/api
+@adminKey = change-this-demo-key
+
+### Health
+GET {{baseUrl}}/health
+
+### Products
+GET {{baseUrl}}/products
+
+### Search products
+GET {{baseUrl}}/products?search=coffee
+
+### Create product
+POST {{baseUrl}}/products
+Content-Type: application/json
+x-admin-key: {{adminKey}}
+
+{
+  "title": "Portfolio Launch Candle",
+  "description": "Small-batch candle prepared as a demo e-commerce product for a launch campaign.",
+  "vendor": "Casa Luma",
+  "productType": "Home",
+  "price": 349,
+  "compareAtPrice": 449,
+  "inventoryQuantity": 24,
+  "status": "active",
+  "imageUrl": "https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=1200&q=80",
+  "tags": "home, candle, launch"
+}
+
+### Leads
+GET {{baseUrl}}/leads
+x-admin-key: {{adminKey}}
+
+### Create lead
+POST {{baseUrl}}/leads
+Content-Type: application/json
+
+{
+  "fullName": "Client Demo",
+  "email": "client@example.com",
+  "company": "Demo Brand",
+  "message": "I need a custom storefront and database-connected forms.",
+  "budget": "$15,000 - $25,000 MXN"
+}
+
+### Theme
+GET {{baseUrl}}/theme
+
+### Render Liquid-style template
+POST {{baseUrl}}/theme/render
+Content-Type: application/json
+
+{
+  "template": "<h3>{{ product.title }}</h3><p>{{ product.description }}</p><strong>{{ product.price | prepend: '$' }}</strong>",
+  "productId": 1
+}

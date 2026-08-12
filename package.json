@@ -1,0 +1,21 @@
+{
+  "name": "commercebridge-suite",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Full-stack e-commerce operations dashboard aligned with Shopify/Liquid and web development experience.",
+  "workspaces": [
+    "apps/web",
+    "apps/api"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev -w apps/web",
+    "dev:api": "npm run dev -w apps/api",
+    "build:web": "npm run build -w apps/web",
+    "build:api": "npm run build -w apps/api",
+    "lint": "npm run lint -w apps/web && npm run lint -w apps/api",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3"
+  }
+}

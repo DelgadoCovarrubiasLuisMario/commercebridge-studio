@@ -1,0 +1,15 @@
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: commercebridge-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+      MYSQL_DATABASE: commercebridge_db
+    ports:
+      - '3308:3306'
+    volumes:
+      - commercebridge_mysql_data:/var/lib/mysql
+
+volumes:
+  commercebridge_mysql_data:
